@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    width: 98vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(500px, 0.5fr));
+    grid-template-areas: 
+    "about-me education-projects"
+    "work-skills education-project";
+    gap: 1rem;
+    margin: 10px;
+    padding: 10px;
+}
+.about-me{
+    grid-area: about-me;
+    background: rgb(228, 185, 192);
+    /* width: 90%; */
+    /* only for printout */
+    /* height: 64%;   */
+    display: flex; flex-direction: column;
+    gap: 10px;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+    font-family: "Noto Sans", sans-serif;
+}
+.image{
+    display: flex;align-items: center;justify-content: center;
+}
+.image img{
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 10px;
+    border-radius: 20px solid rgb(0, 0, 0);
+    display: flex;align-items: center;
+}
+.education-projects{
+    grid-area: education-projects;
+    
+}
+.work-skills{
+    grid-area: work-skills;
+    display: flex;flex-direction: column;gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgb(229, 229, 229);
+    border-radius: 6px;
+    /* only for printout */
+    /* margin-top: -32rem;    */
+    height: 160%;
+}
+.work-skills h3{
+    text-align: end;
+    border-bottom: 2px solid black;
+    padding: 1rem;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.my-words{
+    color: #f7f7f7;
+}
+.my-words h3{
+    text-align: end;
+    padding: 8px 10px;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-weight: 550;
+    line-height: 1.4rem;
+}
+
+.my-words p{
+    text-align:inherit;
+    font-size: 1rem;
+    padding-block: 1rem;
+}
+.work-skills div{
+    padding-block: 10px;
+}
+.work-skills div h4{
+font-size: 1.2rem;font-weight: 550;
+
+}
+.work-skills div h4 span{
+    font-weight: 500; padding-inline: 10px;
+}
+.fa-solid{
+    padding-inline: 10px;
+}
+.work-skills div ul li{
+    font-size: 1.1rem;
+}
+.work-skills div ul li::marker{
+    color: red;
+}
+.education-projects{
+    padding-block: 2.4rem;
+    width: 100%;
+}
+.contact-details{
+    width: 100%;
+}
+.contact-details .name {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+}
+.contact-details .name .my-name{
+    background-color:  rgb(228, 185, 192);
+    color: whitesmoke;
+    display: inline-block;
+    width: 49%;
+    padding-inline: 1rem;
+    font-weight: 500;
+    
+}
+
+.contact{
+    background: rgb(191, 191, 191);
+    display: inline-block;
+    width: 49%;
+    padding-inline: 1rem;
+    font-weight: 450;
+    margin-left: -4px;
+}
+.contact-links{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "location mail"
+    "linked-in Phone";
+    gap: 1rem;
+    font-size: 1rem;
+    padding: 10px 6px;
+}
+.contact-links div{
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-block: 10px;
+}
+.location{
+    grid-area: location;
+}
+.mail{
+    grid-area: mail;
+}
+.linked-in{
+    grid-area: linked-in;
+    padding-inline-start: 8px;
+}
+.Phone{
+    grid-area: Phone;
+}
+.education h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+    border-bottom: 1px solid black;
+}
+.education p{
+    padding-block: 1rem 2rem;
+}
+.education p .college{
+    font-size: 1rem;
+    font-weight: 550;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+.work-experience h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.journey{
+    line-height: 1.6rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+.company{
+    padding-block: 1rem;
+}
+.time-stamp{
+    color: rgb(89, 89, 89);
+    font-weight: 450;
+}
+.company-name{
+    font-weight: 480;
+    color: black;
+}
+.at{
+    text-transform: lowercase;
+}
+@media (width < 790px) {
+    .my-name, .contact{
+        font-size: 0.8rem;
+
+    }
+    .contact-links{
+        font-size: 0.6rem;
+    }
+}
