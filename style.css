@@ -33,6 +33,9 @@ body{
 .image{
     display: flex;align-items: center;justify-content: center;
 }
+.gethub{
+    padding-inline-start: 4px;
+}
 .image img{
     height: 18rem;
     object-fit: cover;
